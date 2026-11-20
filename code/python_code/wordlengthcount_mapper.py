@@ -2,7 +2,9 @@ import sys
 
 def main(separator='\t'):
     """
-    Makes key-value pairs with key = word length, value = word count
+    Makes key-value pairs: 
+    key = word length, 
+    value = word count
     """
 
     for line in sys.stdin:
