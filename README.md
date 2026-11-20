@@ -61,7 +61,7 @@ We are able to run this for any provided word within the text.
 ### Task 5: Sentence
 `T5.sh` runs shell commands to execute python mapper and reducer scripts:
 - `sentence_mapper` takes target word as input and provides all sentences containing the word as output
-- - `original_reducer` provides counts of those sentences.
+- `original_reducer` provides counts of those sentences.
 
 We are able to run this for any provided word within the text as well.
 
