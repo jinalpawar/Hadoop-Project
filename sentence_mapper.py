@@ -1,12 +1,22 @@
 #!/usr/bin/env python3
 
-import re
 import sys
 
-target = sys.argv[1]
-pattern = re.compile(r"(?<![\w'])" + re.escape(target) + r"(?![\w'])", re.IGNORECASE)
+def main(separator='\t'):    
+    """
+    Makes key-value pairs:
+    key = sentence containing given word, 
+    value = sentence count
+    """
+    # input target word from user
+    target = sys.argv[1].lower()
 
-text = re.sub(r"\s+", " ", sys.stdin.read())
-for sentence in re.split(r"(?<=[.!?])\s+", text):
-    if pattern.search(sentence):
-        print(sentence.strip())
+    for line in sys.stdin:
+        words = line.split()
+
+        if target in words:
+            print(line, separator, 1)
+
+
+if __name__ == "__main__":
+    main()
