@@ -11,13 +11,13 @@ def main():
     sentences = []
 
     with open(input_path, 'r') as file: 
-        content = file.readlines()
-        para = ''.join(content)
+        content = [line.strip() for line in file.readlines() if line.strip()]
+        para = ' '.join(content)
 
-    sentences = para.replace("\n", " ").replace("\t", " ").strip().lower().split(". ")
+    sentences = para.replace("\t", " ").lower().split(". ")
 
     with open(output_name, 'w') as output:
-        output.writelines(sentences)
+        output.writelines(i+"\n" for i in sentences)
 
 if __name__ == "__main__":
     main()
