@@ -14,8 +14,7 @@ def main(separator='\t'):
 
         # To avoid overshooting index out of bounds
         for i in range(len(words) - comp_len + 1): 
-            print(*words[i:i+comp_len], separator, 1)
+            print(*words[i:i+comp_len], 1, sep=separator)
 
 if __name__ == "__main__":
     main()
-

@@ -17,7 +17,7 @@ def main(separator='\t'):
 
             if 4 < len(letters) < 10:
                 for letter in letters:
-                    print(letter, separator, 1)
+                    print(letter, 1, sep=separator)
 
 if __name__ == "__main__":
     main()

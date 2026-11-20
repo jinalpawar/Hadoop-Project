@@ -26,7 +26,7 @@ def main(separator='\t'):
     for key, group in groupby(data, itemgetter(0)):
 
         total_count = sum(count for _, count in group)
-        print(key, separator, total_count)
+        print(key, total_count, sep=separator)
 
 
 if __name__ == "__main__":

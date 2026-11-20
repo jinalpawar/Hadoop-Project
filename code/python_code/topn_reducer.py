@@ -16,7 +16,6 @@ def main(separator='\t'):
     """
     Group mapper output by keys, aggregate by total count, print only top n% of used letters
     """
-
     # input comes from STDIN (standard input)
     data = read_mapper_output(sys.stdin, separator=separator)
     top_n = {}
@@ -35,7 +34,7 @@ def main(separator='\t'):
     sorted_letters = sorted(top_n.items(), key=lambda item: item[1], reverse=True) 
 
     for l, c in sorted_letters[:n]:
-        print(l, separator, c)
+        print(l, c, sep=separator)
 
 if __name__ == "__main__":
     main()

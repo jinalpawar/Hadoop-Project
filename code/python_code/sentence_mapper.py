@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import sys
 
 def main(separator='\t'):    
@@ -15,8 +13,7 @@ def main(separator='\t'):
         words = line.split()
 
         if target in words:
-            print(line, separator, 1)
-
+            print(line.rstrip(), 1, sep=separator)
 
 if __name__ == "__main__":
     main()

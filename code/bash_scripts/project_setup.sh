@@ -1,6 +1,6 @@
 # Configure directory names
-hadoop=~/mainhadoop
-project=~/Hadoop-Project-main
+export hadoop=~/mainhadoop
+export project=~/Hadoop-Project-main
 
 cd "$hadoop"
 
@@ -11,7 +11,10 @@ bin/start-all.sh
 # Verify all processes are running
 jps
 
-# Remove directories from previous runs
+# Escape safemode if entered
+bin/hadoop dfsadmin -safemode leave
+
+# Remove existing directories
 bin/hadoop dfs -rmr hadoop-project T1-2 T1-3 T1-4 T1-5 
 bin/hadoop dfs -rmr T2 T3-2 T4-travel T5-travel
 

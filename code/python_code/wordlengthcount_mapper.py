@@ -9,8 +9,7 @@ def main(separator='\t'):
 
     for line in sys.stdin:
         for word in line.split():
-            print(len(word), separator, 1)
+            print(len(word), 1, sep=separator)
 
 if __name__ == "__main__":
     main()
-
