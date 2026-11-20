@@ -11,11 +11,13 @@ bin/start-all.sh
 # Verify all processes are running
 jps
 
-# Add text file to directory and verify
-# mkdir will not create a duplicate directory
-bin/hadoop dfs -mkdir hadoop-project-files
-bin/hadoop dfs -put $project/text/Notebooks_of_Leonardo _Da_Vinci.txt hadoop-pr>
-bin/hadoop dfs -ls hadoop-project-files
+# Remove directories from previous runs
+bin/hadoop dfs -rmr hadoop-project T1-2 T1-3 T1-4 T1-5 
+bin/hadoop dfs -rmr T2 T3-2 T4-travel T5-travel
+
+# Add text file to directory
+bin/hadoop dfs -mkdir hadoop-project
+bin/hadoop dfs -put $project/text/text_processed.txt hadoop-project
 
 # Run Task 1 with word composition lengths 2, 3, 4 and 5
 bash $project/code/bash_scripts/T1.sh 2 T1-2
