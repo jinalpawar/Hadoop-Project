@@ -19,6 +19,13 @@ Within `code`:
 - `bash_script` holds bash scripts to execute each task + script to setup hadoop and run all tasks one by one with prespecified arguments
 - `text` holds original text, cleaned text and preprocessing python script.
 
+## HDFS Config
+
+While running the jobs, we used below configurations:
+- Block size - 64 MB
+- Maximum simultaneous Mapper jobs - 2
+- Slowstart - 5%
+
 ## Implementation
 
 ### Preprocessing
