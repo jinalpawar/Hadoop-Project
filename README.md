@@ -1,6 +1,6 @@
 # Hadoop Project : Text Processing and Analysis
 
-### Team Members: @jinalpawar @jeanneciz
+### Team Members: [Jinal Pawar](github.com/jinalpawar), [Jeanne Ciz](github.com/jeanneciz)
 
 ****
 
